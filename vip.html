@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الاشتراك في VIP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f1f3f6;
+      color: #0f172a;
+    }
+
+    header {
+      background: linear-gradient(90deg, #F2FF07 0%, #32D113 50%, #08387D  100%);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: linear-gradient(90deg, #2FC42E 0%, #0061FF 50%, #08387D  100%);
+   
+    }
+
+    p {
+      font-size: 18px;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    a.telegram-btn {
+      display: inline-block;
+      background: #229ED9;
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      transition: background 0.3s ease;
+    }
+
+    a.telegram-btn:hover {
+      background: #1a8bb8;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      padding: 20px;
+      background: #0f172a;
+      color: #ccc;
+    }
+  
+  
+  .top-bar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #0f172a; /* لون الهيدر */
+  padding: 10px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* عشان يبقى في النص */
+}
+
+.home-btn {
+  background: #10b981;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 255, 29, 1);
+  transition: background 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #0e9e6e;
+}
+
+ 
+  
+  
+  
+  
+  </style>
+</head>
+<body>
+
+
+<nav class="top-bar">
+  <a href="index.html" class="home-btn">🏠 الصفحة الرئيسية</a>
+</nav>
+
+
+
+
+<header>
+ 
+ 
+ <div style="text-align:center; margin-top:15px;">
+  👀 عدد الزوار الآن: <span id="visitors"></span>
+</div>
+
+<script>
+  document.getElementById("visitors").innerText = Math.floor(Math.random() * 1000) + 50;
+</script>
+
+ 
+ 
+ <style>
+  body {
+    background: black url('https://i.gifer.com/7VE.gif') repeat center center;
+    background-size: cover;
+  }
+</style>
+
+ 
+ 
+ 
+ 
+ 
+  <h1>الاشتراك في خدمة VIP</h1>
+</header>
+
+<main>
+  <h1>💎 خدمة التوقعات المدفوعة</h1>
+  <p>
+    انضم الآن إلى خدمة VIP وكن من ضمن المحظوظين بالحصول على توقعات مدروسة بدقة عالية يوميًا.  
+    التوقعات تشمل: أهداف، BTTS، فوز/خسارة والمزيد.
+  </p>
+  <p>📱 تواصل معنا مباشرة عبر تيليجرام للاشتراك:</p>
+  
+  <a class="telegram-btn" href="https://t.me/Arwaa_r" target="_blank">
+    تواصل عبر تيليجرام
+  </a>
+</main>
+
+<footer>
+  &copy; 2025 Football Tips by Ahmed. جميع الحقوق محفوظة.
+</footer>
+
+
+
+
+<div id="bubble" style="position: fixed; bottom: 20px; right: 20px; background: #0f172a; color: white; padding: 10px 15px; border-radius: 20px; display: none;">
+  👋 أهلاً بيك في ركن المميزين !
+</div>
+
+<script>
+  setTimeout(() => {
+    const bubble = document.getElementById("bubble");
+    bubble.style.display = "block";
+    setTimeout(() => bubble.style.display = "none", 4000);
+  }, 1500);
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

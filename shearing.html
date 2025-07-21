@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>شارك الموقع</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom right, #222, #444);
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    #qrcode {
+      margin: 20px auto;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #1e90ff;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #4682b4;
+    }
+
+    .copy-box {
+      margin-top: 20px;
+    }
+
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .copy-btn {
+      margin-top: 10px;
+      background-color: #28a745;
+    }
+
+    .back-link {
+      margin-top: 40px;
+      display: inline-block;
+      color: #ccc;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔗 شارك الموقع مع أصدقائك</h1>
+  <div id="qrcode"></div>
+
+  <div class="copy-box">
+    <input type="text" id="share-link" value="https://ahmedgall.github.io/" readonly>
+    <br>
+    <button class="btn copy-btn" onclick="copyLink()">📋 نسخ الرابط</button>
+  </div>
+
+  <div class="buttons">
+    <a class="btn" href="https://wa.me/?text=https://ahmedgall.github.io/" target="_blank">📱 واتساب</a>
+    <a class="btn" href="https://t.me/share/url?url=https://ahmedgall.github.io/" target="_blank">📨 تيليجرام</a>
+    <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https://ahmedgall.github.io/" target="_blank">📘 فيسبوك</a>
+    <a class="btn" href="https://twitter.com/intent/tweet?url=https://ahmedgall.github.io/" target="_blank">🐦 تويتر</a>
+  </div>
+
+  <a href="index.html" class="back-link">العودة للصفحة الرئيسية</a>
+
+  <script>
+    const link = "https://ahmedgall.github.io/";
+    QRCode.toCanvas(document.getElementById('qrcode'), link, { width: 200 });
+
+    function copyLink() {
+      const input = document.getElementById('share-link');
+      input.select();
+      document.execCommand("copy");
+      alert("✅ تم نسخ رابط الموقع!");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مباريات الامس</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background: #f1f3f6;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #2FC42E 0%, #0061FF 50%, #08387D  100%);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    #date {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .today {
+      text-align: center;
+      margin: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    .predictions {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    .predictions h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #0f172a;
+      border-right: 6px solid #3b82f6;
+      padding-right: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #eee;
+      text-align: right;
+    }
+
+    th {
+      background-color: #f9fafb;
+    }
+
+    tr:hover {
+      background-color: #f1f5f9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f172a;
+      color: #ccc;
+      margin-top: 40px;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      right: 0;
+      background-color: #0f172a;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ccc;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background-color: #1e293b;
+      color: #fff;
+    }
+
+    .open-btn {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      background-color: #3b82f6;
+      color: white;
+      padding: 10px 14px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 6px;
+      z-index: 1100;
+      border: none;
+    
+      
+      
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+  
+  
+  
+ 
+  
+  
+  
+  </style>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">×</a>
+  <a href="index.html">🏠 الصفحة الرئيسية</a>
+  <a  id="dj2" href="tomorrow.html">📅 مباريات الامس</a>
+  <a href="vip.html">🔥 الاشتراك في VIP</a>
+  <a href="qana.html">قنوات تليجرام مجانيه✅ </a>
+
+  <a href="shearing.html">مشاركه الموقع  ✅ </a>
+
+</div>
+
+<!-- Sidebar toggle button -->
+<button class="open-btn" onclick="openSidebar()">☰ القائمة</button>
+
+<!-- Header -->
+<header>
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ <div id="clock" style="font-weight: bold;"></div>
+
+<script>
+  setInterval(() => {
+    const now = new Date();
+    document.getElementById("clock").innerText = now.toLocaleTimeString();
+  }, 1000);
+</script>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <h1 id="ui3">مباريات الامس</h1>
+  <p id="date">جاري التحميل...</p>
+
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="today">
+  توقعات مباريات يوم <span id="tomorrow-date">غداً</span>
+</div>
+
+<!-- قسم التوقعات -->
+<section class="predictions">
+  <h2> توقاعات الامس</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>المباراة</th>
+        <th>التوقع</th>
+        <th>الوقت</th>
+      <th>الحاله</th>
+   
+   
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>بايرن ميونخ × دورتموند</td>
+        <td>أكثر من 2.5</td>
+        <td>20:45</td>
+       <td>✅</td>
+      </tr>
+    
+    
+    
+    
+      <tr>
+        <td>يوفنتوس × ميلان</td>
+        <td>أكثر من 2.5</td>
+        <td>22:00</td>
+           <td>✅</td>
+      </tr>
+  
+  
+  
+
+      <tr>
+        <td>يوفنتوس × ميلان</td>
+        <td>أكثر من 2.5</td>
+        <td>22:00</td>
+           <td>✅</td>
+      </tr>
+  
+  
+  
+  
+      <tr>
+        <td>يوفنتوس × ميلان</td>
+        <td>أكثر من 2.5</td>
+        <td>22:00</td>
+           <td>✅</td>
+      </tr>
+  
+  
+  
+  
+  
+  
+      <tr>
+        <td>يوفنتوس × ميلان</td>
+        <td>أكثر من 2.5</td>
+        <td>22:00</td>
+           <td>✅</td>
+      </tr>
+  
+  
+  
+  
+      <tr>
+        <td>يوفنتوس × ميلان</td>
+        <td>أكثر من 2.5</td>
+        <td>22:00</td>
+           <td>✅</td>
+      </tr>
+  
+  
+  
+  
+    </tbody>
+  </table>
+</section>
+
+
+
+
+
+
+<a href="https://t.me/Arwaa_r" target="_blank" style="
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background-color: #229ED9;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+">📩 تواصل على تليجرام</a>
+
+
+
+
+
+
+<h3 id="typeText"></h3>
+
+<script>
+  const text = "⚽ توقعات اليوم قادمة...";
+  let i = 0;
+  function typing() {
+    if (i < text.length) {
+      document.getElementById("typeText").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 100);
+    }
+  }
+  typing();
+</script>
+
+
+<!-- الفوتر -->
+<footer>
+  &copy; 2025 توقعات أحمد. جميع الحقوق محفوظة.
+</footer>
+
+<!-- Script -->
+<script>
+  // احصل على تاريخ أمس
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+
+  // التاريخ بصيغة إنجليزية مختصرة (مثلاً: 20 Jul 2025)
+  const formattedEN = yesterday.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  });
+
+  // عرض التاريخ في العنصر العلوي
+  document.getElementById('date').innerText = `📆 ${formattedEN}`;
+
+  // التاريخ بصيغة عربية (مثلاً: 20/07/2025)
+  const day = String(yesterday.getDate()).padStart(2, '0');
+  const month = String(yesterday.getMonth() + 1).padStart(2, '0');
+  const year = yesterday.getFullYear();
+  const formattedAR = `${day}/${month}/${year}`;
+
+  // عرض التاريخ داخل نص "توقعات مباريات يوم ..."
+  document.getElementById('tomorrow-date').textContent = formattedAR;
+
+  // فتح وإغلاق القائمة الجانبية
+  function openSidebar() {
+    document.getElementById("mySidebar").style.width = "250px";
+  }
+
+  function closeSidebar() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+
+
+
+  function openSidebar() {
+    document.getElementById("mySidebar").style.width = "250px";
+  }
+
+  function closeSidebar() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+<div id="fake-notify" style="position: fixed; top: 20px; right: 20px; background: #0f172a; color: white; padding: 10px 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: none;">
+  📣 إشعار: لا تفوّت توقعات اليوم!
+</div>
+
+<script>
+  setTimeout(() => {
+    document.getElementById("fake-notify").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("fake-notify").style.display = "none";
+    }, 5000);
+  }, 3000);
+</script>
+
+
+
+
+
+</body>
+</html>
